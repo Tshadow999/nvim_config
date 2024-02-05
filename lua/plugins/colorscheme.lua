@@ -1,8 +1,7 @@
 return {
-	"Shatur/neovim-ayu",
+    "Shatur/neovim-ayu",
 
-	config = function()
-		mirage = false,
-		vim.cmd("colorscheme ayu-dark")
-	end,
+    config = function()
+        vim.cmd("colorscheme ayu-dark")
+    end,
 }

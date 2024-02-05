@@ -16,9 +16,9 @@ local tab_spaces = 4
 opt.expandtab = true
 opt.tabstop = tab_spaces
 opt.softtabstop = tab_spaces
-opt.shiftwidth= tab_spaces
+opt.shiftwidth = tab_spaces
 
-opt.signcolumn="yes" 
+opt.signcolumn = "yes"
 
 opt.clipboard = "unnamedplus"
 
@@ -30,3 +30,7 @@ vim.o.completeopt = "menuone,noselect"
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
+
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "p", '"_dP')
