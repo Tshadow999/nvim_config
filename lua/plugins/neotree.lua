@@ -23,35 +23,48 @@ return {
                 end
             end , -- this sorts files and directories descendantly
             default_component_configs = {
+                git_status = {
+                    symbols = {
+                        added     = "✚", 
+                        modified  = "",
+                        deleted   = "✖",
+                        renamed   = "󰁕",
+                        untracked = "",
+                        ignored   = "",
+                        unstaged  = "󰄱",
+                        staged    = "",
+                        conflict  = "",
+                    }
+                },
                 container = {
                     enable_character_fade = true
                 },
                 file_size = {
                     enabled = true,
-                    required_width = 64, -- min width of window required to show this column
+                    required_width = 64,
                 },
                 type = {
                     enabled = true,
-                    required_width = 122, -- min width of window required to show this column
+                    required_width = 122,
                 },
                 last_modified = {
                     enabled = true,
-                    required_width = 88, -- min width of window required to show this column
+                    required_width = 88, 
                 },
                 created = {
                     enabled = true,
-                    required_width = 110, -- min width of window required to show this column
+                    required_width = 110, 
                 },
                 symlink_target = {
                     enabled = false,
                 },
             },
             window = {
-                width = 30,
+                width = 25,
             },
             filesystem = {
                 filtered_items = {
-                    visible = true, -- when true, they will just be displayed differently than normal items
+                    visible = true, 
                     hide_dotfiles = false,
                     hide_gitignored = false,
                     hide_by_name = {
