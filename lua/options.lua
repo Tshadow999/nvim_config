@@ -25,7 +25,12 @@ opt.clipboard = "unnamedplus"
 opt.splitbelow = true
 opt.splitright = true
 
+opt.colorcolumn = "80"
+opt.cursorline = true
+
 vim.o.completeopt = "menuone,noselect"
+
+opt.ignorecase = true
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
