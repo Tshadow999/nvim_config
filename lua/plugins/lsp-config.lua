@@ -36,7 +36,17 @@ return {
 
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             lspconfig.lua_ls.setup({ capabilities = capabilities })
-            lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+                root_dir  = require("lspconfig/util").root_pattern("Cargo.toml"),
+                settings = {
+                    ["rust_analyzer"] = {
+                        cargo = {
+                            allFeatures = true,
+                        },
+                    },
+                },
+            })
             lspconfig.csharp_ls.setup({ capabilities = capabilities })
 
             vim.keymap.set("n", "<S-k>", vim.lsp.buf.hover, {})
