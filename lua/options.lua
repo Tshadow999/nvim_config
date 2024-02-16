@@ -1,4 +1,4 @@
-local opt = vim.opt
+local opt = vim.o
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -28,7 +28,7 @@ opt.splitright = true
 opt.colorcolumn = "80"
 opt.cursorline = true
 
-vim.o.completeopt = "menuone,noselect"
+opt.completeopt = "menuone,noselect"
 
 opt.ignorecase = true
 
