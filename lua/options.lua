@@ -1,10 +1,12 @@
-local opt = vim.o
+local opt = vim.opt
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 opt.number = true
 opt.relativenumber = true
+
+opt.mouse = "a"
 
 opt.termguicolors = true
 
@@ -18,21 +20,31 @@ opt.tabstop = tab_spaces
 opt.softtabstop = tab_spaces
 opt.shiftwidth = tab_spaces
 
-opt.signcolumn = "yes"
-
 opt.clipboard = "unnamedplus"
 
 opt.splitbelow = true
 opt.splitright = true
 
-opt.colorcolumn = "80"
 opt.cursorline = true
+opt.textwidth = 80
+opt.colorcolumn = "80"
+opt.signcolumn = "yes"
 
 opt.completeopt = "menuone,noselect"
 
 opt.ignorecase = true
+opt.smartcase = true
 
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+opt.updatetime = 250
+opt.timeoutlen = 300
+
+opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+
+vim.opt.inccommand = "split"
+
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
