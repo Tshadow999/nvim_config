@@ -96,6 +96,9 @@ return {
 				rust_analyzer = {},
 				csharp_ls = {},
 
+				-- Cannot find gdscript for some reason.
+				-- gdscript = {},
+
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -147,6 +150,8 @@ return {
 					end,
 				},
 			})
+
+			require("lspconfig").gdscript.setup({})
 		end,
 	},
 }
